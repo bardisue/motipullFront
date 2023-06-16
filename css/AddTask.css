@@ -1,0 +1,70 @@
+.addTask {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.addTask>div {
+    width: 450px;
+    height: 500px;
+    background-color: white;
+    border: solid;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+}
+
+.addContent {
+    padding: 1rem;
+}
+
+.addNameWrapper {}
+
+.addDescriptionWrapper {
+    margin-top: 1rem;
+}
+
+.addAdminWrapper {
+    margin-top: 1rem;
+}
+
+.addAdminWrapper>div {
+    margin-bottom: 0.5rem;
+}
+
+.addAdminWrapper>label {
+    background-color: #ff8080;
+    padding: 3px;
+    margin-right: 0.5rem;
+    border-radius: 10px;
+}
+
+.addClassificationWrapper {
+    margin-top: 1rem;
+}
+
+.addClassificationWrapper>div {
+    margin-bottom: 0.5rem;
+}
+
+.addClassificationWrapper>label {
+    background-color: #bfbfbf;
+    padding: 5px;
+    margin-right: 0.5rem;
+    border-radius: 10px;
+}
+
+.addDetailWrapper {
+    margin-top: 1rem;
+}
+
+.Add {
+    display: block;
+    margin: 30px 0 0 auto;
+}

@@ -1,0 +1,24 @@
+.column {
+    width: 360px;
+    height: 1500px;
+    border: solid;
+    overflow-y: auto;
+    display: inline-block;
+    margin: 20px;
+    background-color: #bfbfbf;
+}
+
+.column_title_wrapper {
+    width: 360px;
+    height: 30px;
+    border-bottom: solid;
+    margin: auto;
+    background-color: #9e9e9e;
+}
+
+.column_title {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    font-weight: bold;
+}

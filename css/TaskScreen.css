@@ -1,0 +1,79 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.taskItem {
+    width: 300px;
+    height: 400px;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+    border: solid #595959;
+    background-color: #ffff99;
+    overflow-y: auto;
+}
+
+h3 {
+    margin-block-start: 0px;
+    margin-block-end: 1rem;
+}
+
+.taskTitle {}
+
+.taskContent {
+    font-size: 12px;
+    color: #595959;
+}
+
+.adminWrapper {
+    overflow: hidden;
+}
+
+.admin {
+    float: left;
+    margin-right: 1rem;
+    background-color: #ff8080;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.classificationWrapper {
+    overflow: hidden;
+}
+
+.classification {
+    clear: both;
+    float: left;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    background-color: #bfbfbf;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.detailWorksPercent {
+    clear: both;
+    margin-top: 1rem;
+}
+
+.detailWorksSentence {
+    clear: both;
+    font-size: 12px;
+    color: #595959
+}
+
+.cheerUp {
+    margin-top: 1rem;
+}
+
+.dueDate {
+    clear: both;
+    margin-top: 1rem;
+}
+.next {
+    clear: both;
+    display: block;
+    margin : 3rem 0 0 auto;
+}
