@@ -315,7 +315,7 @@ export default function App({ $target }) {
                     const classJson = JSON.stringify(result2.data)
                     const classifications = JSON.parse(classJson);
                     newTask["classifications"] = classifications
-                    console.log(newTask["dueDate"].data)
+                    newTask["detailWorks"] = []
                     this.setState({
                         ...this.state,
                         tasks: [...this.state.tasks, newTask],
