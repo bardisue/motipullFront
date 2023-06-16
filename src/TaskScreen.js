@@ -44,7 +44,7 @@ export default function TaskScreen({ $target, initialState, column_id, cheerUpBu
                                 ` : ``}
                         <button class="cheerUp">응원</button>
                         <div class="detailWorksSentence">${cheerUp}명이 응원합니다!</div>
-                        <div class="dueDate">${dueDate ? `
+                        <div class="dueDate">${dueDate > 0 ? `
                             ${((dueDate.getTime() - currentDate.getTime()) / 60 / 60 / 24 / 1000) >= 0 ?
                         `<b>${Math.ceil((dueDate.getTime() - currentDate.getTime()) / 60 / 60 / 24 / 1000)}</b>일 남았습니다` : 'dueDate를 넘겼습니다.'}
                         ` : ``}</div>

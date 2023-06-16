@@ -165,6 +165,12 @@ export default function App({ $target }) {
                                 for (let l = 0; l < nextTasks[i].admins.length; l++) {
                                     if (nextUsers[u].name === nextTasks[i].admins[l]) {
                                         nextUsers[u].value++;
+                                        console.log(typeof(nextUsers[u].name))
+                                        axios.post("http://localhost:8080/ranking/plusPoint",
+                                        {
+                                            "memberName": nextUsers[u].name,
+                                            "rankingPoint" : nextUsers[u].value
+                                        }).then().catch(error => {console.log(error)})
                                     }
                                 }
                             }
@@ -309,6 +315,7 @@ export default function App({ $target }) {
                     const classJson = JSON.stringify(result2.data)
                     const classifications = JSON.parse(classJson);
                     newTask["classifications"] = classifications
+                    console.log(newTask["dueDate"].data)
                     this.setState({
                         ...this.state,
                         tasks: [...this.state.tasks, newTask],
@@ -321,6 +328,23 @@ export default function App({ $target }) {
     }).catch(error => {
         console.log('WTF', error);
     });
+
+    axios('http://localhost:8080/ranking/getPoints')
+    .then(res => {
+        const setTasks = this.state.tasks;
+        const setUsers = this.state.users;
+
+        const tmpRanking = JSON.stringify(res.data)
+        const rankingData = JSON.parse(tmpRanking);
+        console.log(setUsers.length)
+        
+        for (let u = 0; u < setUsers.length; u++) {
+            console.log(setUsers[u].value)
+            if(rankingData[setUsers[u].name] != null)
+                setUsers[u].value = rankingData[setUsers[u].name]
+        }
+        console.log("flag2")
+    }).catch(error => {console.log("아오 에러시치")})
 
 }
 
